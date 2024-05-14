@@ -1,32 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 body {
   font-family: "Inter", sans-serif;
   font-style: normal;
 
-  width: 1280px;
+  /* width: 1280px; */
+  width: 80%;
   background-color: #1b1b1b;
 
-  padding: 31px 200px 60px 650px;
+  /* padding: 31px 200px 60px 650px; */
+  margin: 0 auto;
+
+
 }
 
-.voise__header {
-  height: 120px;
-  width: 80%;
+p, div  {
+  cursor: default;
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.header {
+  width: 80%;
 }
 
 .header__logo {
   font-size: 42px;
   color: #ffffff;
-  margin-top: 40px;
-
-  height: 80px;
+  margin: 40px 0 10px 0 ;
 }
 
 sup {
@@ -37,19 +41,22 @@ sup {
   height: 0px;
   opacity: 0.7;
   border-bottom: 1px solid #545454;
+  margin-bottom: 40px;
 }
 
-.voise__profile {
-  height: 120px;
+.profile {
+  /* height: 120px; */
   width: 80%;
-  margin-top: 40px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
+  align-items: center;
 }
 
 .profile__main {
   display: flex;
+  margin: 0;
+  align-items: center;
 }
 
 .profile__pic {
@@ -60,44 +67,24 @@ sup {
 .profile__info {
   margin-left: 34px;
 
-  height: 120px;
+  /* height: 120px; */
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:left;
 }
 
 .profile__name {
   font-size: 42px;
   color: #ffffff;
+  margin: 0;
 }
 
 .profile__status {
   font-size: 18px;
   color: #ffffff;
   font-weight: 400;
-}
-
-.profile__edit-btn {
-  box-sizing: border-box;
-  background-color: #1b1b1b;
-  border: 1px solid #ffffff;
-  height: 24px;
-  width: 24px;
-
-  background-image: url("./img/icon/edit.png");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  margin-left: 25px;
-  margin-top: 39px;
-}
-
-.profile__edit-btn:hover {
-  border: 1px solid #a2a2a2;
-  cursor: pointer;
-
-  opacity: 0.5;
+  margin: 0;
 }
 
 .profile__add-btn {
@@ -112,51 +99,63 @@ sup {
   background-repeat: no-repeat;
   background-position: center;
 
-  margin-top: 35px;
+  margin: 0;
+
+  /* margin: 35px 0; */
 }
 
 .profile__add-btn:hover {
-  border: 1px solid #a2a2a2;
+  /* border: 1px solid #ffffff; */
   cursor: pointer;
 
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
-.voise__cards-row3 {
-  width: 80%;
+.content {
+  
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.cards {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
   margin-top: 30px;
 }
 
 .card__item {
-  width: 282px;
-  height: 361px;
+  width: 250px;
+  /* height: 320px; */
 
   background: #ffffff;
   border-radius: 10px;
 
-  margin-top: 30px;
+  margin: 30px 0 0 0;
 }
 
 .card__pic {
   border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 250px;
+  object-fit:cover;
+  
 }
 
 .card__info {
-  width: 85%;
   display: flex;
   justify-content: space-between;
-
-  margin-top: 20px;
-  margin-left: 20px;
+  padding: 10px;
+  margin: 0;
 }
 
 .card__text {
   font-weight: 700;
   font-size: 24px;
-
+  margin: 0;
   color: #1b1b1b;
 }
 
@@ -164,7 +163,7 @@ sup {
   height: 19px;
   width: 22px;
 
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 
   border: 0px solid #a2a2a2;
   cursor: pointer;
@@ -183,4 +182,23 @@ sup {
     background-image: url("./img/icon/heart_act.png");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (max-width: 1155px) {
+
+  .cards {
+
+    gap: 10px;
+
+  }
+  }
+
+@media (max-width: 700px) {
+
+
+.profile__main, .profile {
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
 }
